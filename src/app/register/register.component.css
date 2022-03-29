@@ -1,0 +1,106 @@
+.container{
+  width: 70%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  background-color: #7C2828;
+  padding: 10px;
+}
+.section{
+  background-color: #7C2828;
+}
+.mat-card{
+  width:100%;
+  height:100%;
+}
+.register-title{
+  color: white;
+  font-weight: normal;
+  align-items: center;
+  height: 35px;
+  margin-bottom: 20px;
+  margin-left: 100px;
+}
+
+.login-card{
+  width: 70%;
+  height: 70%;
+  /* background-image: url("/../assets/chess-playing-hand.jpeg"); */
+}
+.card{
+  background-color: #7C2828;
+}
+
+.card-content
+{
+  float: left;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 20%;
+}
+
+.example-full-width {
+  width: 20%;
+}
+.chess-image{
+  display: block;
+  margin-left: auto;
+  margin-right: 0px;
+  width: 100%;
+  height: 100vh;
+
+}
+.h1{
+
+}
+.register-button{
+  align-items: center;
+  width: 20%;
+  font-size: 20px;
+  height: 35px;
+  margin-bottom: 20px;
+  margin-left: 100px;
+}
+.home-button{
+  align-items: center;
+  width: 20%;
+  font-size: 20px;
+  height: 35px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  background-color: black;
+  color: white;
+}
+.wrapper
+{
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  background-color: #7C2828;
+}
+
+.wrapper h1
+{
+  color:white;
+  margin-left: 100px;
+  font-size: 35px;
+  margin-top: 20px;
+}
+
+.mat-toolbar{
+  background-color: black;
+  color: black;
+}
+.chess-toolbar{
+  flex: 1 1 auto;
+  background-color: black;
+  color: black;
+}
