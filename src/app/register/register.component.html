@@ -1,53 +1,65 @@
-<!--<mat-toolbar class="chess-toolbar">
-    <mat-toolbar-row class="chess-toolbar">
-    <button mat-button class="home-button">Home</button>
-    </mat-toolbar-row>
-</mat-toolbar>-->
 <div class="wrapper">
   <div>
       <h1>Create a new account</h1>
       <mat-list role="list">
-      <form class="example-form">
+      <form class="example-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
 
           <mat-list-item>
-          <mat-form-field class="example-full-width" appearance="legacy">
+          <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>FirstName</mat-label>
+              <input matInput placeholder="First Name" type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }">
+          </mat-form-field>
+              </mat-list-item>
+        <br>
+        <mat-list-item>
+          <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>LastName</mat-label>
+              <input matInput placeholder="Last Name" type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }">
+          </mat-form-field>
+              </mat-list-item>
+        <br>
+          <mat-list-item>
+          <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Email" type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+          </mat-form-field>
+              </mat-list-item>
+        <br>
+        <mat-list-item>
+          <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>Username</mat-label>
-              <input matInput placeholder="Name">
+              <input matInput placeholder="Username" type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
           </mat-form-field>
               </mat-list-item>
-
+        <br>
           <mat-list-item>
           <mat-form-field class="example-full-width" appearance="fill">
-              <mat-label>Email</mat-label>
-              <input matInput type="text" [(ngModel)]='email' name='email'placeholder="Email">
+              <mat-label>Password</mat-label>
+              <input matInput placeholder="Password" type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
           </mat-form-field>
               </mat-list-item>
-
+        <br>
           <mat-list-item>
-          <mat-form-field class="example-full-width" appearance="fill">
-              <mat-label>Email</mat-label>
-              <input matInput type="password" placeholder="Password">
-          </mat-form-field>
+            <mat-form-field>
+              <mat-select placeholder="Role" formControlName="role">
+                <mat-option [value]="role.name" *ngFor="let role of roles;">{{role.name}}</mat-option>
+              </mat-select>
+            </mat-form-field>
               </mat-list-item>
+              <mat-card-actions>
 
-          <mat-list-item>
-          <mat-form-field class="example-full-width" appearance="fill">
-              <mat-label>Email</mat-label>
-              <input matInput type="password" placeholder="Reenter password">
-          </mat-form-field>
-              </mat-list-item>
+                <button mat-button [disabled]="loading" >Register</button>
+                <!--      <img class="pl-3" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />-->
+                <button mat-button  routerLink="/login" >Cancel</button>
+                <mat-spinner  *ngIf="loading" [diameter]="30"></mat-spinner>
+
+              </mat-card-actions>
+
       </form>
       </mat-list>
-      <section>
-              <button mat-raised-button class="register-button" routerLink="/login">Sign Up</button>
-      </section>
   </div>
   <div>
   <img src="https://images.unsplash.com/photo-1554924620-ac9f6aef17bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80"
        class="chess-image">
   </div>
 </div>
-
-<!--            </mat-grid-tile>
-         <mat-grid-tile>-->
-
