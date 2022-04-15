@@ -6,11 +6,11 @@ import {AuthGuard} from './_services/auth-guard.service';
 import {AdminComponent} from './admin/admin.component';
 import {RegisterComponent} from './register/register.component';
 import {Role} from './_models/role';
-
-//TODO: add the route to the 'settings' component.
+import { HistoryComponent } from './history/history.component';
+import { AddfriendComponent } from './addfriend/addfriend.component';
 
 const routes: Routes = [{path: '', component: HomeComponent, canActivate: [AuthGuard]}, {path: 'login', component: LoginComponent},{ path: 'register', component: RegisterComponent },
-  {path: 'admin', component: AdminComponent, canActivate: [AuthGuard], data: { roles: [Role.admin]}},
+  {path: 'history', component: HistoryComponent}, {path: 'addfriend', component: AddfriendComponent}, {path: 'admin', component: AdminComponent, canActivate: [AuthGuard], data: { roles: [Role.admin]}},
   { path: '**', redirectTo: '' }];
 
 @NgModule({
