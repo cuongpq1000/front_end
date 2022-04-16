@@ -14,6 +14,8 @@ import { RegisterComponent } from './register/register.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {JwtInterceptor} from './interceptors/jwt.interceptor';
 import {ErrorInterceptor} from './interceptors/error.interceptor';
+import { HistoryComponent } from './history/history.component';
+import { AddfriendComponent } from './addfriend/addfriend.component';
 
 
 @NgModule({
@@ -23,6 +25,8 @@ import {ErrorInterceptor} from './interceptors/error.interceptor';
     HomeComponent,
     AdminComponent,
     RegisterComponent,
+    HistoryComponent,
+    AddfriendComponent,
   ],
   imports: [
     BrowserModule,
