@@ -8,9 +8,10 @@ import {RegisterComponent} from './register/register.component';
 import {Role} from './_models/role';
 import { HistoryComponent } from './history/history.component';
 import { AddfriendComponent } from './addfriend/addfriend.component';
+import { GameComponent } from './game/game.component';
 
 const routes: Routes = [{path: '', component: HomeComponent, canActivate: [AuthGuard]}, {path: 'login', component: LoginComponent},{ path: 'register', component: RegisterComponent },
-  {path: 'history', component: HistoryComponent}, {path: 'addfriend', component: AddfriendComponent}, {path: 'admin', component: AdminComponent, canActivate: [AuthGuard], data: { roles: [Role.admin]}},
+  {path: 'history', component: HistoryComponent}, {path: 'game', component: GameComponent}, {path: 'addfriend', component: AddfriendComponent}, {path: 'admin', component: AdminComponent, canActivate: [AuthGuard], data: { roles: [Role.admin]}},
   { path: '**', redirectTo: '' }];
 
 @NgModule({

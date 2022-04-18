@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { HistoryComponent } from '../history/history.component';\n{\n  path: 'history', component;\n\n  HistoryComponent;\n}","map":null,"metadata":{},"sourceType":"module"}
