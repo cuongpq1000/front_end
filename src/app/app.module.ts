@@ -16,6 +16,7 @@ import {JwtInterceptor} from './interceptors/jwt.interceptor';
 import {ErrorInterceptor} from './interceptors/error.interceptor';
 import { HistoryComponent } from './history/history.component';
 import { AddfriendComponent } from './addfriend/addfriend.component';
+import { GameComponent } from './game/game.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { AddfriendComponent } from './addfriend/addfriend.component';
     RegisterComponent,
     HistoryComponent,
     AddfriendComponent,
+    GameComponent,
   ],
   imports: [
     BrowserModule,
