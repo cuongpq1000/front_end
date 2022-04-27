@@ -216,6 +216,7 @@ div.whiteBox {
   height: 50px;
   width:  50px;
   background-color: #E2DFD2;
+  overflow: visible;
 }
 
 div.blackBox {
@@ -223,6 +224,7 @@ div.blackBox {
   height: 50px;
   width: 50px;
   background-color: lightslategrey;
+  overflow: visible;
 }
 
 .piecesBox {
