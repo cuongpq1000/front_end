@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { io } from \"socket.io-client\";\nexport class ChatService {\n  constructor() {\n    this.url = \"http://localhost:3000\";\n    this.socket = io(this.url);\n  }\n\n  sendMessage(message) {\n    this.socket.emit('new-message', message);\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

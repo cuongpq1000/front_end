@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var HandlerRole = /*#__PURE__*/(() => {\n  (function (HandlerRole) {\n    HandlerRole[\"SOURCE\"] = \"SOURCE\";\n    HandlerRole[\"TARGET\"] = \"TARGET\";\n  })(HandlerRole || (HandlerRole = {}));\n\n  return HandlerRole;\n})();","map":null,"metadata":{},"sourceType":"module"}

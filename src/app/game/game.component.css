@@ -5,6 +5,10 @@
   display: flex;
   align-items: center;
 }
+.sent_msg {
+	float: right;
+	width: 46%;
+}
 
 .grid-container {
   display: grid;

@@ -1,0 +1,1 @@
+{"ast":null,"code":"// export class ChatService{\n//   private url = \"http://localhost:3000\";\n//   private socket;\n//   constructor(){\n//     this.socket = io(this.url);\n//   }\n// }\nexport const environment = {\n  production: false,\n  SOCKET_ENDPOINT: 'http://localhost:3000'\n};","map":null,"metadata":{},"sourceType":"module"}

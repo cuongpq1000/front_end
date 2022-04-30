@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { first } from 'rxjs/operators';
+import { UserService } from '../_services/user.service';
 
 @Component({
   selector: 'app-game',
@@ -10,22 +13,26 @@ export class GameComponent implements OnInit {
   loading = false;
   submitted = false;
   error = '';
+  messageList: string[] = [];
 
   startingMinutes = 10;
   time = this.startingMinutes * 60;
   minutes: number = 10;
   seconds: any;
+  message: string;
 
   countdownEl = document.getElementById("countdown");
 
-  constructor() {
+  constructor(private router: Router) {
 
   }
 
   ngOnInit(): void {
     setInterval(() => this.updateCountdown(), 1000);
+    if(this.time == 0){
+      this.router.navigate(['/']);
+    }
   }
-
 
   updateCountdown()
   {

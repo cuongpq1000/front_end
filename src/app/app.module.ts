@@ -15,8 +15,8 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {JwtInterceptor} from './interceptors/jwt.interceptor';
 import {ErrorInterceptor} from './interceptors/error.interceptor';
 import { HistoryComponent } from './history/history.component';
-import { AddfriendComponent } from './addfriend/addfriend.component';
 import { GameComponent } from './game/game.component';
+import { ChatComponent } from './chat/chat.component';
 
 
 @NgModule({
@@ -27,8 +27,8 @@ import { GameComponent } from './game/game.component';
     AdminComponent,
     RegisterComponent,
     HistoryComponent,
-    AddfriendComponent,
     GameComponent,
+    ChatComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +41,6 @@ import { GameComponent } from './game/game.component';
   ],
   providers: [ { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
