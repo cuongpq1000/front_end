@@ -2,18 +2,17 @@
     <h1 class="title">Choose Game</h1>
     <mat-form-field appearance="fill" class="title">
     <mat-label>Select</mat-label>
-    <mat-select>
-        <mat-option value="one">10 minutes</mat-option>
-        <mat-option value="two">15 minutes</mat-option>
-        <mat-option value="three">20 minutes</mat-option>
-        <mat-option value="four">25 minutes</mat-option>
-        <mat-option value="five">30 minutes</mat-option>
-        <mat-option value="six">no time limit</mat-option>
+    <mat-select [(value)]="type">
+        <mat-option value="10">10 minutes</mat-option>
+        <mat-option value="15">15 minutes</mat-option>
+        <mat-option value="20">20 minutes</mat-option>
+        <mat-option value="25">25 minutes</mat-option>
+        <mat-option value="30">30 minutes</mat-option>
       </mat-select>
     </mat-form-field>
 <mat-grid-list cols="2" rowHeight="2:1">
     <mat-grid-tile>
-        <button mat-raised-button class="button" (click)="Link()">Players</button>&nbsp;
+        <button mat-raised-button class="button" (click)="Link()">Join Room</button>&nbsp;
     </mat-grid-tile>
     <mat-grid-tile>
         <button mat-raised-button class="button">Friends</button>

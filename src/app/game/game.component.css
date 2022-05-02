@@ -4,10 +4,7 @@
   justify-content: center;
   display: flex;
   align-items: center;
-}
-.sent_msg {
-	float: right;
-	width: 46%;
+  z-index: 1;
 }
 
 .grid-container {
@@ -16,9 +13,11 @@
   gap: 10px;
   background-color: #7C2828;
   padding: 10px;
+  z-index: 1;
 }
 .section{
   background-color: #7C2828;
+  z-index: 1;
 }
 .mat-card{
   width:100%;
@@ -61,6 +60,7 @@
   margin-right: 0px;
   width: 100%;
   height: 100vh;
+  z-index: 2;
 
 }
 .h1{
@@ -99,6 +99,7 @@
   display: grid;
   grid-template-columns: 2fr 6fr 2fr;
   background-color: #7C2828;
+  z-index: -2;
 }
 
 .wrapper h1
@@ -211,6 +212,10 @@ p{
   width: 400px;
   display: grid;
   grid-template-columns:  repeat(8, 1fr);
+  position: relative;
+  margin-left: 60px;
+
+  /*z-index: 5;*/
   /*grid-template-rows: repeat(8, 1fr);*/
   /*grid-template-rows: 500px repeat(8, 1fr);*/
 }
@@ -231,6 +236,20 @@ div.blackBox {
   overflow: visible;
 }
 
+whitePieces {
+  width:50px;
+  height:50px;
+  z-index: 50 !important;
+  position: relative;
+}
+
+blackPieces {
+  width:50px;
+  height:50px;
+  z-index: 50 !important;
+  position: absolute;
+
+}
 .piecesBox {
   position: relative;
 }
@@ -251,4 +270,18 @@ imageIn{
   /*right: auto;*/
   /*left: auto;*/
   /*top: auto;*/
+}
+
+object{
+  width:50px;
+  height:50px;
+  z-index: 50 !important;
+  position: absolute;
+}
+
+.movable
+{
+  position:absolute;
+  TOP: 40px;
+  LEFT: 40px;
 }
